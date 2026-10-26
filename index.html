@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LinguaFlow - Language Translator</title>
+  <meta name="description" content="Translate text between 14 languages with LinguaFlow.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="logo" href="/" aria-label="LinguaFlow home">Lingua<span>Flow</span></a>
+    <button class="ghost" id="historyToggle" aria-expanded="false" aria-controls="historyPanel">History</button>
+  </header>
+
+  <main>
+    <h1>Say it in any language.</h1>
+    <p class="lead">Type or paste up to 1,000 characters. Pick a language. Get your translation in a second.</p>
+
+    <section class="translator" aria-label="Translator">
+      <div class="panel source">
+        <div class="bar">
+          <label for="from" class="sr">Translate from</label>
+          <select id="from"></select>
+          <span class="count" id="count" aria-live="off">0 / 1000</span>
+        </div>
+        <label for="input" class="sr">Text to translate</label>
+        <textarea id="input" maxlength="1000" placeholder="Start typing here..." spellcheck="false"></textarea>
+        <div class="actions">
+          <button class="ghost small" id="clear">Clear</button>
+          <button class="ghost small" id="speakIn">Listen</button>
+        </div>
+      </div>
+
+      <button class="swap" id="swap" aria-label="Swap languages" title="Swap languages">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4 3 8l4 4M3 8h14M17 20l4-4-4-4M21 16H7"/></svg>
+      </button>
+
+      <div class="panel target">
+        <div class="bar">
+          <label for="to" class="sr">Translate to</label>
+          <select id="to"></select>
+        </div>
+        <output id="output" class="result" aria-live="polite">Your translation appears here.</output>
+        <div class="actions">
+          <button class="dark small" id="copy">Copy</button>
+          <button class="dark small" id="speakOut">Listen</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="submit-row">
+      <button class="primary" id="translate">Translate</button>
+      <span class="hint">Press Ctrl + Enter to translate</span>
+    </div>
+    <p class="status" id="status" role="status"></p>
+  </main>
+
+  <aside class="history" id="historyPanel" hidden aria-label="Translation history">
+    <div class="history-head">
+      <h2>Recent translations</h2>
+      <button class="ghost small" id="clearHistory">Clear all</button>
+    </div>
+    <ul id="historyList"></ul>
+  </aside>
+
+  <footer>LinguaFlow &copy; <span id="year"></span>. Translations by MyMemory.</footer>
+  <script src="app.js"></script>
+</body>
+</html>
