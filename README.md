@@ -25,6 +25,8 @@ linguaflow-static/
 ├── index.html
 ├── style.css
 └── app.js
+└── README.md
+
 ```
 
 🚀 Run Locally
