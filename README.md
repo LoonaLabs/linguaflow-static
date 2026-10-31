@@ -26,6 +26,7 @@ linguaflow-static/
 ├── style.css
 └── app.js
 └── README.md
+└── linguaflow.png
 
 ```
 
