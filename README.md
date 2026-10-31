@@ -41,7 +41,7 @@ Then open `index.html` in your browser (or use the VS Code *Live Server* extensi
 
 📸 screenshot 
 
-![linguaFlow screenshot](linguaflow.jpg)
+![linguaflow screenshot](linguaflow.jpg)
 
 👩‍💻 Author
 
