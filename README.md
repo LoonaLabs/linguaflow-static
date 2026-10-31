@@ -38,9 +38,9 @@ cd linguaflow-static
 
 Then open `index.html` in your browser (or use the VS Code *Live Server* extension).
 
-📸 Screenshot
+📸 screenshot 
 
-![LinguaFlow screenshot](linguaflow.png) 
+![linguaFlow screenshot](linguaflow.jpg)
 
 👩‍💻 Author
 
